@@ -1,34 +1,87 @@
-body {
-    display: flex;
-    justify-content: center;
-    background-color: #e7c6ff;
-    margin: 0;
-    height: 100vh;
-    font-size: larger;
-}
+ @font-face {
+     font-family: 'Minecraft';
+     src: url('https://cdn.jsdelivr.net/gh/aditkumar08/minecraft-font/Minecraft-Regular.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
 
-a {
-    color: rgb(255, 0, 255);
-    text-decoration: none;
-}
+ body {
+     font-family: "minecraft";
 
-a:hover {
-    text-decoration: underline;
-}
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #c8b6ff;
+     margin: 0;
+     height: 100vh;
+     font-size: larger;
+ }
 
-.main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-    height: 100vh;
-    width: 90%;
-}
+ a {
+     color: rgb(255, 0, 255);
+     text-decoration: none;
+ }
 
-.content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
+ a:hover {
+     text-decoration: underline;
+ }
+
+ .header {
+     margin-top: 0;
+     position: sticky;
+     top: 0;
+     height: 7.5vh;
+     width: 100%;
+
+     background-color: #bea9fc;
+
+     display: flex;
+     align-items: center;
+
+ }
+
+ .logo_link {
+
+     height: 100%;
+     width: 5vh;
+     margin-left: 2.5vh;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #logo {
+     height: 90%;
+ }
+
+ #logo:hover {
+     height: 100%;
+ }
+
+ .title {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .main {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     padding: 40px;
+     height: 100vh;
+     width: 90%;
+ }
+
+ .content {
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+ }
+
+ .content_divs {
+     width: 175vh;
+ }
