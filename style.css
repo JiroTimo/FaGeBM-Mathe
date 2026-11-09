@@ -1,93 +1,101 @@
- @font-face {
-     font-family: 'Minecraft';
-     src: url('https://cdn.jsdelivr.net/gh/aditkumar08/minecraft-font/Minecraft-Regular.woff2') format('woff2');
-     font-weight: normal;
-     font-style: normal;
- }
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://cdn.jsdelivr.net/gh/aditkumar08/minecraft-font/Minecraft-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
- body {
-     font-family: "minecraft";
+body {
+    font-family: "minecraft";
+    display: flex;
+    flex-direction: column;
+    background-color: #c8b6ff;
+    margin: 0;
+    font-size: larger;
+    min-height: 100vh;
+}
 
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     background-color: #c8b6ff;
-     margin: 0;
-     font-size: larger;
- }
+a {
+    color: rgb(255, 0, 255);
+    text-decoration: none;
+}
 
- a {
-     color: rgb(255, 0, 255);
-     text-decoration: none;
- }
+a:hover {
+    text-decoration: underline;
+}
 
- a:hover {
-     text-decoration: underline;
- }
+.header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 7.5vh;
+    width: 100%;
+    background-color: #bea9fc;
+    z-index: 100;
+}
 
- .header {
-     display: flex;
-     align-content: center;
-
-     position: sticky;
-     top: 0;
-     height: 7.5vh;
-     width: 100%;
-
-     background-color: #bea9fc;
-
-
- }
-
- .logo_div {
-     left: 0;
-
-     height: 100%;
-     width: 10vh;
-
-     display: flex;
-     align-items: center;
-     justify-content: center;
- }
-
- #logo {
-     height: 90%;
- }
-
- #logo:hover {
+.logo_div {
     height: 100%;
- }
+    width: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
- .title {
-     position: absolute;
-     left: 50%;
-     top: -25%;
+#logo {
+    height: 90%;
+    transition: height 0.15s ease;
+}
 
-     transform: translateX(-50%);
- }
+#logo:hover {
+    height: 100%;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.main {
+    margin-left: 20vh;
+    padding: 50px 50px;
+}
+
+.main section {
+    scroll-margin-top: 8vh;
+}
+
+section div {
+    height: 200px;
+}
 
 
+.sidebar {
+    position: fixed;
+    top: 7.5vh;
+    left: 0;
+    height: calc(100vh - 8.0vh);
+    width: 23vh;
 
- .main {
-     display: flex;
-     align-items: center;
-     flex-direction: column;
-     padding: 40px;
-     width: 90%;
+    background-color: #bea9fc;
 
- }
+}
 
- .content {
-     padding: 20px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     gap: 20px;
- }
+.topics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 
- .content_div {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     justify-content: left;
- }
