@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FaGeBM Mathe</title>
 
-    <link rel="shortcut icon" href="images/tuff.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/redstone.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 
 <body>
     <div class="header">
         <a href="#" class="logo_div">
-            <img src="images/tuff.png" alt="Logo" id="logo">
+            <img src="images/redstone.png" alt="Error" id="logo">
         </a>
         <div class="title">
             <h1>Mathe - Abschlussprüfung 2027</h1>
@@ -59,6 +64,7 @@
                         <h2>Saeulen-, Stab-, Balken- und Kreisdiagramm</h2>
                         <div>
                             <h3>Haeufigkeitstabelle</h3>
+                            <p></p>
                             <table>
                                 <tr>
                                     <th>Merkmal</th>
@@ -94,10 +100,89 @@
                     </div>
                     <div>
                         <h2>Histogramm</h2>
-
+                        <p>Verglichen mit Saeulendiagramm usw. hat das Histogramm keine exakte Werte für die Saeulen
+                            sondern ranges. <br>
+                            Für das braucht es Richtwerte an denen man sich orientieren kann, damit man das Histogramm
+                            <br>
+                            "übersichtlich" erstellen kann. <br>
+                            Dabei ist \(n\) der Umfang
+                        </p>
+                        <ul>
+                            <li>Klassenanzahl (k)</li>
+                            <ul>
+                                <li>\(\sqrt{n} \approx k\)</li>
+                            </ul>
+                            <br>
+                            <li>Klassenbreite (b)</li>
+                            <ul>
+                                <li>\(\dfrac{x_{max}-x_{min}}{k} \approx b\)</li>
+                            </ul>
+                        </ul>
+                        <p> \(ukg\) (also die unterste Klassengrenze) muss gleich oder kleiner als \(x_{min}\) sein.<br>
+                            \(k\) kann man auf ganze Zahlen runden und \(b\) je nach Resultat. <br>
+                            Dann braucht es noch eine Überprüfung ob alle Werte bis und mit \(x_{max}\) mit
+                            hineinbezogen sind</p>
+                        <ul>
+                            <li>\(ukg + k*b > x_{max}\)</li>
+                        </ul>
+                        <p>Falls \(ukg + k*b\) nicht grösser als \(x_{max}\) sein sollte, kann man einfach \(k\)
+                            oder/und \(b\) erhöhen. <br>
+                            Nach einer Änderung muss es wieder überprüft werden.</p>
+                        <p>Vor der Erstellung des Histogramms, erstellt man noch eine Haeufigkeitstabelle mit Klassen.
+                            <br>
+                            Das macht es auch deutlich einfacher für das eigentliche Histogramm.
+                        </p>
+                        <table>
+                            <tr>
+                                <th>Klassen</th>
+                                <th>Abs. H.</th>
+                            </tr>
+                            <tr>
+                                <td>[\(ukg\) ; \(ukg+b\))</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>[\(ukg+b\) ; \(...\))</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <td>[\(...\) ; \(...\))</td>
+                                <td>x</td>
+                            </tr>
+                        </table>
+                        <p>Dabei heisst "[", dass der Wert innerhalb dieser range ist und ")", dass der Wert nicht mehr
+                            dazugehört.</p>
+                        <p>Wenn man das Histogramm (endlich) zeichnet ist die y-Achse für die abs. H. und die x-Achse
+                            für die Klassen. <br>
+                            Am Nullpunkt faengt es für die x-Achse mit dem UKG an und wird jeweils mit \(b\) erhöht.
+                            <br>
+                            Für die y-Achse faengt es mit 0 an. <br>
+                        </p>
+                        <h3>Beispiel</h3>
+                        <p>Daten: <br>
+                            6, 39, 49, 19, 29, 20, 2, 5, 6, 7, 1, 8, 2, 5, 30, 25, 36, 37</p>
+                        <p>Geordnet: <br>
+                            1, 2, 2, 5, 5, 6, 6, 7, 8, 19, 20, 25, 29, 30, 36, 37, 39, 49 <br>
+                            Heisst: <br>
+                            \(x_{min} = 1\) <br>
+                            \(x_{max} = 49\) <br>
+                            \(n = 18\)
+                        </p>
+                        <p>Richtwerte: <br>
+                            \(\sqrt{n} \approx 4.24\) <br>
+                            Ich nehme einfach 5, was denke ich meistens besser ist <br>
+                            als wenn ich 4 nehmen würde. <br>
+                            \(k = 5\)</p>
+                        <p>\(\dfrac{49 - 1}{5} = \dfrac{48}{5} = 9.6 \approx b \) <br>
+                            Damit es cleaner ist nehme ich 10 <br>
+                            \(b = 10\)</p>
+                            <p></p>
                     </div>
                     <div>
                         <h2>Boxplot</h2>
+                        <p>\(Q1 = \dfrac{0.5n + 1}{2}\)</p>
+                        <p>\(Q2 = \dfrac{n + 1}{2}\)</p>
+                        <p>\(Q3 = \dfrac{1.5n + 1}{2}\)</p>
                     </div>
                 </div>
             </section>
