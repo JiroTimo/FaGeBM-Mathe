@@ -96,19 +96,20 @@
                                 </tr>
                             </table>
                         </div>
-
                     </div>
                     <div>
                         <h2>Histogramm</h2>
                         <p>Verglichen mit Saeulendiagramm usw. hat das Histogramm keine exakte Werte für die Saeulen
                             sondern ranges. <br>
-                            Für das braucht es Richtwerte an denen man sich orientieren kann, damit man das Histogramm
+                            Das Histogramm gehört zum Merkmal stetig. <br>
+                            Für das braucht es Richtwerte und dessen Überprüfung an denen man sich orientieren kann,
+                            damit man das Histogramm
                             <br>
                             "übersichtlich" erstellen kann. <br>
                             Dabei ist \(n\) der Umfang
                         </p>
-                        <ul>
-                            <li>Klassenanzahl (k)</li>
+                        <ol>
+                            <li>Klassenanzahl bzw. Anzahl Saeulen (k)</li>
                             <ul>
                                 <li>\(\sqrt{n} \approx k\)</li>
                             </ul>
@@ -117,17 +118,21 @@
                             <ul>
                                 <li>\(\dfrac{x_{max}-x_{min}}{k} \approx b\)</li>
                             </ul>
-                        </ul>
-                        <p> \(ukg\) (also die unterste Klassengrenze) muss gleich oder kleiner als \(x_{min}\) sein.<br>
-                            \(k\) kann man auf ganze Zahlen runden und \(b\) je nach Resultat. <br>
-                            Dann braucht es noch eine Überprüfung ob alle Werte bis und mit \(x_{max}\) mit
-                            hineinbezogen sind</p>
-                        <ul>
-                            <li>\(ukg + k*b > x_{max}\)</li>
-                        </ul>
-                        <p>Falls \(ukg + k*b\) nicht grösser als \(x_{max}\) sein sollte, kann man einfach \(k\)
-                            oder/und \(b\) erhöhen. <br>
-                            Nach einer Änderung muss es wieder überprüft werden.</p>
+                            <br>
+                            <li>Unterste Klassengrenze</li>
+                            <ul>
+                                <li>\(ukg \le x_{min}\)</li>
+                            </ul>
+                            <br>
+                            <li>Überprüfung</li>
+                            <ul>
+                                <li>\(ukg + k * b > x_{max}\)</li>
+                            </ul>
+                        </ol>
+                        <p>\(k\) runde ich selbst meistens auf die naechste ganze Zahl auf<br>
+                            \(b\) runde ich einfach damit es clean ist. Je nach Zahl runde ich auf oder ab. <br>
+                            Falls die Überprüfung nicht wahr ist, kann man \(k\) oder/und \(b\) erhöhen.</p>
+
                         <p>Vor der Erstellung des Histogramms, erstellt man noch eine Haeufigkeitstabelle mit Klassen.
                             <br>
                             Das macht es auch deutlich einfacher für das eigentliche Histogramm.
@@ -149,10 +154,14 @@
                                 <td>[\(...\) ; \(...\))</td>
                                 <td>x</td>
                             </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>\(n\)</td>
+                            </tr>
                         </table>
                         <p>Dabei heisst "[", dass der Wert innerhalb dieser range ist und ")", dass der Wert nicht mehr
                             dazugehört.</p>
-                        <p>Wenn man das Histogramm (endlich) zeichnet ist die y-Achse für die abs. H. und die x-Achse
+                        <p>Wenn man das Histogramm zeichnet ist die y-Achse für die abs. H. und die x-Achse
                             für die Klassen. <br>
                             Am Nullpunkt faengt es für die x-Achse mit dem UKG an und wird jeweils mit \(b\) erhöht.
                             <br>
