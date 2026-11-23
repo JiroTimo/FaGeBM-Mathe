@@ -7,9 +7,12 @@
     <title>FaGeBM Mathe</title>
 
     <link rel="shortcut icon" href="images/redstone.png" type="image/x-icon">
-
-
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 
 <body class="exercises">
@@ -39,12 +42,22 @@
         <div class="content">
             <section id="terms">
                 <h1>Terme</h1>
-
             </section>
 
             <section id="equations">
                 <h1>Gleichungen</h1>
+                <div>
+                    <h2>Lineare gleichungen</h2>
+                    <div>
 
+                    </div>
+
+                    <h2>Quadratische Gleichungen</h2>
+                    <div>
+                        <p>Generierte Aufgabe: <span id="quadratic_task">\(ax^2 + bx + c = 0\)</span></p>
+                        <button id="test">Ok</button>
+                    </div>
+                </div>
             </section>
 
             <section id="functions">
@@ -64,6 +77,8 @@
         </div>
 
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
